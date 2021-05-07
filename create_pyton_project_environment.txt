@@ -1,0 +1,22 @@
+Run the Visual Code IDE, open a Terminal, do the following operations,
+
+1. Install virtualenv package
+$ pip3 install virtualenv 
+
+2. Create python virtual env
+$ virtualenv -p python3 <env_name>
+
+3. Activate virtual environment
+$ source /bin/activate 
+
+4. Using pip3 install required python package
+5. Using pip3 to create a requirements.txt to fix your development tool packages.
+$ pip3 freeze > requirements.txt 
+(For clone the working environment by running command after clone the GitHub repo,)
+$ pip3 install -r requirements.txt
+
+6. Continue on code development
+
+8. Deactivate virtual environment
+$ deactivate
+

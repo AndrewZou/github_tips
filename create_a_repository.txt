@@ -1,0 +1,14 @@
+(1) Loginto GitHub to create a new repo, copy the lines below to binding a local repo with the GitHub remote repo.
+
+echo "# github_tips" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/AndrewZou/github_tips.git
+git push -u origin main# github_tips
+
+(2) Continue to work on project
+git add <new_src_code_file>
+git commit -m "The description of commit contents"
+git push
