@@ -1,0 +1,39 @@
+Case:
+I commit the recent change into the repo for a reason by making detached HEAD. My coworker was not able to see these changes.
+We run command to figure out what is the original source code that was checked in.
+Command: git reflog
+e63d5e5 (HEAD -> trader-ui-strategy, origin/trader-ui-strategy) HEAD@{3}: checkout: moving from trader-ui-strategy to e63d5e5
+e63d5e5 (HEAD -> trader-ui-strategy, origin/trader-ui-strategy) HEAD@{4}: pull origin trader-ui-strategy: Fast-forward
+45f18f4 HEAD@{5}: checkout: moving from ae5294e7b1f672631087b660b70368d5bba4f8ed to trader-ui-strategy
+ae5294e HEAD@{6}: commit: Check in code for Corey to play for AG Grid data render issue
+
+Luckly, we are able to see the HEAD: ae5294e7b1f672631087b660b70368d5bba4f8ed from the latest checkout.
+So, we checkout the detached HEAD branch, with command,
+
+git checkout ae5294e7b1f672631087b660b70368d5bba4f8ed
+/////////////Screen Printout///////////////////////////////////
+Note: switching to 'ae5294e7b1f672631087b660b70368d5bba4f8ed'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at ae5294e Check in code for Corey to play for AG Grid data render issue
+/////////////End Screen Printout//////////////////////////////////////////////
+
+Then, we are trying to merge this branch with my working branch.
+First, switch to my working branch by running command: git checkout trader-ui-strategy
+Second, merge this working branch with the detached branch code by running command with the HEAD hash: git merge ae5294e7b1f672631087b660b70368d5bba4f8ed
+
+Finally, we got push these merged code to the official repo.
