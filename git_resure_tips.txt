@@ -1,0 +1,5 @@
+http://www.programblings.com/2008/06/07/the-illustrated-guide-to-recovering-lost-commits-with-git/
+
+http://gitready.com/advanced/2009/01/17/restoring-lost-commits.html
+
+http://gitready.com/intermediate/2009/02/09/reflog-your-safety-net.html
